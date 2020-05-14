@@ -1,0 +1,2 @@
+class Sato < ApplicationRecord
+end

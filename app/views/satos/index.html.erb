@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Satos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Context</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @satos.each do |sato| %>
+      <tr>
+        <td><%= sato.title %></td>
+        <td><%= sato.context %></td>
+        <td><%= link_to 'Show', sato %></td>
+        <td><%= link_to 'Edit', edit_sato_path(sato) %></td>
+        <td><%= link_to 'Destroy', sato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sato', new_sato_path %>
